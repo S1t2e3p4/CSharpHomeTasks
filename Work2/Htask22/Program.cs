@@ -4,20 +4,15 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 Console.Clear();
- Console.WriteLine("Введите число: ");
- int number = int.Parse(Console.ReadLine());
- if ((number>99&&number<1000)||(number<-99&&number>-1000))
- {
- int Ostatok = number%100;
- int betveenCount = Ostatok/10;
- if (betveenCount<0)
- {
-    betveenCount=betveenCount*-1;
- }
- Console.WriteLine (betveenCount);
- }
- else
- {
-    Console.WriteLine ("Ошибка! Введено некорректное значение.");
- }
- 
+ Console.Write("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+
+if(number/100 == 0) 
+{
+    Console.WriteLine($"{number} -> третьей цифры нет");
+}
+else {
+int number2 = number <0 ? -number : number;
+while (number2 > 999) number2 = number2/10;
+Console.Write($"{number} -> {number2%10}");
+}
