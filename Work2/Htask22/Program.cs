@@ -4,7 +4,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 Console.Clear();
- Console.WriteLine("Введите трёхзначное число: ");
+ Console.WriteLine("Введите число: ");
  int number = int.Parse(Console.ReadLine());
  if ((number>99&&number<1000)||(number<-99&&number>-1000))
  {
